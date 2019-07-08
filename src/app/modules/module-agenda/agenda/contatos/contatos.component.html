@@ -3,11 +3,11 @@
     <i class="fas fa-search"></i>
     <input type="text" name="" id="">
 </div>
-<div class="lista">
-    <div class="contato">
+<div class="lista" *ngFor="let contato of contatos">
+    <div class="contato" [routerLink]="[ '/agenda/contato', contato.id ]">
         <div class="profile">
             <i class="fas fa-user"></i>
         </div>
-        <p>Nome</p>
+        <p>{{ contato.nome }}</p>
     </div>
 </div>

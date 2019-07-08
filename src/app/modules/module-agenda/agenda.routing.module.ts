@@ -11,12 +11,12 @@ const agendaRouting: Routes = [
     { path: '', component: DefaultComponent },
     { path: 'contato', children: [
       { path: '', redirectTo: '/agenda', pathMatch: 'full'},
-      { path: ':id', component: ContatoComponent },
       { path: 'adicionar', component: AdicionarEditarComponent },
       { path: 'editar', children: [
         { path: '', redirectTo: '/agenda', pathMatch: 'full'},
         { path: ':id', component: AdicionarEditarComponent }
-      ] },      
+      ] }, 
+      { path: ':id', component: ContatoComponent },           
     ]},
   ]},
 ];

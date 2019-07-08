@@ -1,1 +1,21 @@
-<p>adicionar-editar works!</p>
+<div class="profile">
+    <i class="fas fa-user"></i>
+</div>
+<form action="" [formGroup]="form" (ngSubmit)="salvar()">
+    <div class="group-input">
+        <label for="">Nome</label>
+        <input type="text" formControlName="nome">
+    </div>
+    <div class="group-input">
+        <label for="">
+            Tipo de canal de contato, podendo ser email, 
+            celular ou fixo
+        </label>
+        <input type="text" formControlName="canal">
+    </div>
+    <div class="group-input">
+        <label for="">Observação</label>
+        <textarea name="" id="" cols="30" rows="10" formControlName="obs"></textarea>
+    </div>
+    <button type="submit">Salvar</button>
+</form>

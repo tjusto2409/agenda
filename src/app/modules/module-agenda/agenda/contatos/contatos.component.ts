@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatosComponent implements OnInit {
 
+  contatos = JSON.parse(localStorage.getItem('contatos'));
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  search() {
+    
   }
 
 }

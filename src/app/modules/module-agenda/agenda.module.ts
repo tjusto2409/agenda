@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AgendaRoutingModule } from './agenda.routing.module';
 
@@ -19,6 +20,7 @@ import { AdicionarEditarComponent } from './agenda/contato/adicionar-editar/adic
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AgendaRoutingModule
   ],
   exports: [

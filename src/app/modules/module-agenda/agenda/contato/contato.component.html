@@ -1,20 +1,20 @@
-<div class="row">
+<div class="row" *ngFor="let user of contato">
     <div class="offset-11 col-1 icon">
-        <i class="fas fa-edit"></i>
-        <i class="fas fa-trash-alt"></i>
+        <a [routerLink]="[ '/agenda/contato/editar', user.id ]">
+            <i class="fas fa-edit"></i>
+        </a>
+        <i class="fas fa-trash-alt" (click)="excluir()"></i>
     </div>
     <div class="col-12">
         <div class="profile">
             <i class="fas fa-user"></i>
         </div>
-        <p>Nome</p>
-    </div>
-    <div class="col-12">
-        <p>Canal</p>
+        <p>{{ user?.nome }}</p>
+        <p>{{ user?.canal }}</p>
         <div class="obs">
             <label for="">Observação</label>
             <p>
-                Observação
+                {{ user?.obs }}
             </p>
         </div>
     </div>
